@@ -40,4 +40,7 @@ class MainVC: UITableViewController {
         
         return cell
     }
+    
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {
+    }
 }
