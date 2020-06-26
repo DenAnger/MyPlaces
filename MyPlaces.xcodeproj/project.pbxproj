@@ -15,6 +15,7 @@
 		6932A67E24A0D64000A9501C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932A67D24A0D64000A9501C /* MainVC.swift */; };
 		6939402F24A62C9000295029 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939402E24A62C8F00295029 /* CustomCell.swift */; };
 		6939403124A635A400295029 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939403024A635A400295029 /* Place.swift */; };
+		6939403324A6482A00295029 /* NewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939403224A6482A00295029 /* NewPlaceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6932A67D24A0D64000A9501C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6939402E24A62C8F00295029 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		6939403024A635A400295029 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		6939403224A6482A00295029 /* NewPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				6932A67D24A0D64000A9501C /* MainVC.swift */,
 				6939402E24A62C8F00295029 /* CustomCell.swift */,
+				6939403224A6482A00295029 /* NewPlaceVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				6932A66A24A0D23300A9501C /* AppDelegate.swift in Sources */,
 				6932A67E24A0D64000A9501C /* MainVC.swift in Sources */,
 				6939402F24A62C9000295029 /* CustomCell.swift in Sources */,
+				6939403324A6482A00295029 /* NewPlaceVC.swift in Sources */,
 				6932A66C24A0D23300A9501C /* SceneDelegate.swift in Sources */,
 				6939403124A635A400295029 /* Place.swift in Sources */,
 			);
