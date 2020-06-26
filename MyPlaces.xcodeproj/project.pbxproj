@@ -56,15 +56,55 @@
 		6932A66824A0D23300A9501C /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				6932A66924A0D23300A9501C /* AppDelegate.swift */,
-				6932A66B24A0D23300A9501C /* SceneDelegate.swift */,
-				6932A67D24A0D64000A9501C /* MainVC.swift */,
-				6932A66F24A0D23300A9501C /* Main.storyboard */,
-				6932A67224A0D23400A9501C /* Assets.xcassets */,
-				6932A67424A0D23400A9501C /* LaunchScreen.storyboard */,
-				6932A67724A0D23400A9501C /* Info.plist */,
+				6934BDC524A5FADE0086256C /* Models */,
+				6934BDC624A5FAE80086256C /* Views */,
+				6934BDC424A5FAD30086256C /* Controllers */,
+				6934BDC724A5FAF30086256C /* Resources */,
+				6934BDC324A5FAB40086256C /* Supporting Files */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		6934BDC324A5FAB40086256C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6932A66924A0D23300A9501C /* AppDelegate.swift */,
+				6932A66B24A0D23300A9501C /* SceneDelegate.swift */,
+				6932A67724A0D23400A9501C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6934BDC424A5FAD30086256C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6932A67D24A0D64000A9501C /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6934BDC524A5FADE0086256C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6934BDC624A5FAE80086256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6932A66F24A0D23300A9501C /* Main.storyboard */,
+				6932A67424A0D23400A9501C /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6934BDC724A5FAF30086256C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6932A67224A0D23400A9501C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
