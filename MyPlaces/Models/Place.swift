@@ -6,14 +6,15 @@
 //  Copyright © 2020 Denis Abramov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     
-    var name: String
-    var location: String
-    var type: String
-    var image: String
+    var name: String?
+    var location: String?
+    var type: String?
+    var image: UIImage?
+    var restaurantImage: String?
     
     static let restaurantNames = [
         "Burger Records", "Little Kitchen", "Суши Make", "Перчини",
@@ -30,7 +31,8 @@ struct Place {
             places.append(Place(name: place,
                                 location: "Novosibirsk",
                                 type: "Restaurant",
-                                image: place))
+                                image: nil,
+                                restaurantImage: place))
         }
         return places
     }

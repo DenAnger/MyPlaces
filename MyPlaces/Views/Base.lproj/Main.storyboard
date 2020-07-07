@@ -92,7 +92,7 @@
             <objects>
                 <tableViewController id="RQj-WB-TFf" customClass="NewPlaceVC" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1uj-W2-h8V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -235,13 +235,18 @@
                     <navigationItem key="navigationItem" title="New Place" id="400-rd-MUF">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7O8-rt-efI">
                             <connections>
+                                <action selector="cancelAction:" destination="RQj-WB-TFf" id="xLY-I1-ahk"/>
                                 <segue destination="HoW-mT-YOg" kind="unwind" unwindAction="cancelAction:" id="lST-lw-AdU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gct-ib-TJs"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="CW4-nb-ZlB" id="xL1-7V-Lcd"/>
+                        <outlet property="placeImage" destination="CW4-nb-ZlB" id="xL1-7V-Lcd"/>
+                        <outlet property="placeLocation" destination="grZ-cO-ZsV" id="mfo-0d-fKH"/>
+                        <outlet property="placeName" destination="CLl-4N-uHw" id="zFF-et-v5Z"/>
+                        <outlet property="placeType" destination="0yC-f3-CPX" id="IBV-d6-axP"/>
+                        <outlet property="saveButton" destination="Gct-ib-TJs" id="0sz-7B-t0L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4H-b3-xSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
