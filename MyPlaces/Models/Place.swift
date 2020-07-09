@@ -6,34 +6,37 @@
 //  Copyright © 2020 Denis Abramov. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-struct Place {
+class Place: Object {
     
-    var name: String?
-    var location: String?
-    var type: String?
-    var image: UIImage?
-    var restaurantImage: String?
+    @objc dynamic var name: String?
+    @objc dynamic var location: String?
+    @objc dynamic var type: String?
+    @objc dynamic var imageData: Data?
     
-    static let restaurantNames = [
+    let restaurantNames = [
         "Burger Records", "Little Kitchen", "Суши Make", "Перчини",
         "Мятный карась", "KANNAM CHICKEN", "Гудман", "Please, Don't stick",
         "Megapolisbar PEOPLE'S", "Respublica", "Хан Буз",
         "Чучвара", "Шафран", "Баранжир", "ШашлыкоFF"
     ]
     
-    static func getPlace() -> [Place] {
-        
-        var places = [Place]()
+    func savePlaces() {
         
         for place in restaurantNames {
-            places.append(Place(name: place,
-                                location: "Novosibirsk",
-                                type: "Restaurant",
-                                image: nil,
-                                restaurantImage: place))
+            
+            let image = UIImage(named: place)
+            guard let imageData = image?.pngData() else { return }
+            
+            let newPlace = Place()
+            
+            newPlace.name = place
+                newPlace.location = "Novosibirsk"
+                    newPlace.type = "Restaurant"
+            newPlace.imageData = imageData
+            
+            StorageManager.saveObject(newPlace)
         }
-        return places
     }
 }
