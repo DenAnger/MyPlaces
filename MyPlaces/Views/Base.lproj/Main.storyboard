@@ -29,7 +29,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rEL-Hd-4hN">
-                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="BMT-4P-2iz" customClass="CustomCell" customModule="MyPlaces" customModuleProvider="target">
@@ -101,7 +101,7 @@
                             <constraint firstItem="R39-YC-veV" firstAttribute="leading" secondItem="0KI-DS-5GQ" secondAttribute="leading" id="6dW-He-srT"/>
                             <constraint firstItem="0KI-DS-5GQ" firstAttribute="trailing" secondItem="rEL-Hd-4hN" secondAttribute="trailing" id="90V-CA-IrU"/>
                             <constraint firstItem="rEL-Hd-4hN" firstAttribute="top" secondItem="R39-YC-veV" secondAttribute="bottom" constant="1" id="DAl-lY-kvY"/>
-                            <constraint firstItem="0KI-DS-5GQ" firstAttribute="bottom" secondItem="rEL-Hd-4hN" secondAttribute="bottom" id="odD-kw-R91"/>
+                            <constraint firstItem="rEL-Hd-4hN" firstAttribute="bottom" secondItem="wse-Xd-ZNR" secondAttribute="bottom" id="odD-kw-R91"/>
                             <constraint firstItem="rEL-Hd-4hN" firstAttribute="leading" secondItem="0KI-DS-5GQ" secondAttribute="leading" id="ybx-Lv-S2D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0KI-DS-5GQ"/>
@@ -272,7 +272,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-oY-upJ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="265" placeholderIntrinsicHeight="45" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-oY-upJ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="74.5" y="27.5" width="265" height="45"/>
                                                 </stackView>
                                             </subviews>
