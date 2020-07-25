@@ -265,6 +265,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="L9Y-2r-zYZ">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9Y-2r-zYZ" id="psO-A5-rWC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-oY-upJ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="74.5" y="27.5" width="265" height="45"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pxc-oY-upJ" firstAttribute="centerY" secondItem="psO-A5-rWC" secondAttribute="centerY" id="fGE-iL-uBg"/>
+                                                <constraint firstItem="pxc-oY-upJ" firstAttribute="centerX" secondItem="psO-A5-rWC" secondAttribute="centerX" id="gUa-rX-F6p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
