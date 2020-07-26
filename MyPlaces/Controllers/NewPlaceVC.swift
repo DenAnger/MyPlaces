@@ -96,10 +96,11 @@ class NewPlaceVC: UITableViewController {
         let imageData = image?.pngData()
         
         let newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         imageData: imageData,
-                         rating: Double(ratingControl.rating))
+                             location: placeLocation.text,
+                             type: placeType.text,
+                             imageData: imageData,
+                             rating: Double(ratingControl.rating))
+        
         if currentPlace != nil {
             try! realm.write {
                 currentPlace?.name = newPlace.name
@@ -109,7 +110,7 @@ class NewPlaceVC: UITableViewController {
                 currentPlace?.rating = newPlace.rating
             }
         } else {
-        StorageManager.saveObject(newPlace)
+            StorageManager.saveObject(newPlace)
         }
     }
     
