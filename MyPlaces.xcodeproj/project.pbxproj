@@ -18,6 +18,7 @@
 		6939403124A635A400295029 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939403024A635A400295029 /* Place.swift */; };
 		6939403324A6482A00295029 /* NewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939403224A6482A00295029 /* NewPlaceVC.swift */; };
 		6994579024CEA1D700462044 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6994578F24CEA1D700462044 /* MapVC.swift */; };
+		6994579424CEBAEB00462044 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6994579324CEBAEB00462044 /* MapKit.framework */; };
 		69A5A77524CC14EC00C78069 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A5A77424CC14EC00C78069 /* RatingControl.swift */; };
 		70F42EAC38EBD919F00B2BF1 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C780D90B3070B5CF12534ED /* Pods_MyPlaces.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		6939403024A635A400295029 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		6939403224A6482A00295029 /* NewPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceVC.swift; sourceTree = "<group>"; };
 		6994578F24CEA1D700462044 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		6994579324CEBAEB00462044 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		69A5A77424CC14EC00C78069 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		6C780D90B3070B5CF12534ED /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CBCDCBE38B423F8D4BEF2F /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6994579424CEBAEB00462044 /* MapKit.framework in Frameworks */,
 				70F42EAC38EBD919F00B2BF1 /* Pods_MyPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		66E79EEDC502FF80D7068F80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6994579324CEBAEB00462044 /* MapKit.framework */,
 				6C780D90B3070B5CF12534ED /* Pods_MyPlaces.framework */,
 			);
 			name = Frameworks;
