@@ -17,6 +17,7 @@ class MapVC: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,13 @@ class MapVC: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(
+                    title: "Location Services are Disabled",
+                    message: "To enable it go: Settings -> Privacy -> Location Services and turn On"
+                )
+            }
         }
     }
     
@@ -78,6 +86,12 @@ class MapVC: UIViewController {
             mapView.showsUserLocation = true
             break
         case .denied:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(
+                    title: "Location Services are Disabled",
+                    message: "To enable it go: Settings -> Privacy -> Location Services and turn On"
+                )
+            }
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -90,8 +104,28 @@ class MapVC: UIViewController {
         }
     }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
     @IBAction func closeVC(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func centerUserLocation(_ sender: Any) {
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
     }
 }
 

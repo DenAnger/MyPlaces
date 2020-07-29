@@ -364,7 +364,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dvS-Og-O0O">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFr-6W-ZhY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFr-6W-ZhY" userLabel="Cancel Button">
                                 <rect key="frame" x="380" y="43" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6T7-8a-DgP"/>
@@ -375,12 +375,25 @@
                                     <action selector="closeVC:" destination="Y66-6t-GHm" eventType="touchUpInside" id="GXb-c3-bN1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAk-rw-aoF" userLabel="Location Button">
+                                <rect key="frame" x="380" y="740" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Is1-DH-W1x"/>
+                                    <constraint firstAttribute="width" constant="25" id="lZj-XU-KC8"/>
+                                </constraints>
+                                <state key="normal" image="navigation"/>
+                                <connections>
+                                    <action selector="centerUserLocation:" destination="Y66-6t-GHm" eventType="touchUpInside" id="bKP-4L-dNZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="D77-LQ-ln7" firstAttribute="bottom" secondItem="LAk-rw-aoF" secondAttribute="bottom" constant="43" id="60J-co-XKw"/>
                             <constraint firstItem="dvS-Og-O0O" firstAttribute="leading" secondItem="D77-LQ-ln7" secondAttribute="leading" id="6b0-Uo-bxk"/>
                             <constraint firstItem="GFr-6W-ZhY" firstAttribute="top" secondItem="D77-LQ-ln7" secondAttribute="top" constant="43" id="MtL-Fm-Sli"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="dvS-Og-O0O" secondAttribute="trailing" id="UeZ-hs-kgS"/>
+                            <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="LAk-rw-aoF" secondAttribute="trailing" constant="9" id="jaM-aE-B4U"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="GFr-6W-ZhY" secondAttribute="trailing" constant="9" id="pay-Rs-Xl2"/>
                             <constraint firstItem="dvS-Og-O0O" firstAttribute="top" secondItem="JpM-Zs-IY5" secondAttribute="top" id="uwr-tg-rD4"/>
                             <constraint firstAttribute="bottom" secondItem="dvS-Og-O0O" secondAttribute="bottom" id="xM2-Zh-cVi"/>
@@ -446,5 +459,6 @@
         <image name="Photo" width="195" height="196"/>
         <image name="cancel" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
+        <image name="navigation" width="128" height="128"/>
     </resources>
 </document>
