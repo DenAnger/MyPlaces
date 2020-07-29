@@ -13,17 +13,31 @@ import CoreLocation
 class MapVC: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var mapPinImage: UIButton!
+    @IBOutlet var doneButton: UIButton!
     
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
     let regionInMeters = 10_000.0
+    var incomeSegueIdentifier = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        setupPlacemark()
+        setupMapView()
         checkLocationServices()
+    }
+    
+    private func setupMapView() {
+        
+        if incomeSegueIdentifier == "showPlace" {
+            setupPlacemark()
+            mapPinImage.isHidden = true
+            addressLabel.isHidden = true
+            doneButton.isHidden = true
+        }
     }
     
     private func setupPlacemark() {
@@ -84,6 +98,10 @@ class MapVC: UIViewController {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
+            
+            if incomeSegueIdentifier == "getAddress" {
+                showUserLocation()
+            }
             break
         case .denied:
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -104,6 +122,16 @@ class MapVC: UIViewController {
         }
     }
     
+    private func showUserLocation() {
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,
@@ -119,13 +147,10 @@ class MapVC: UIViewController {
     }
     
     @IBAction func centerUserLocation(_ sender: Any) {
-        
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion(center: location,
-                                            latitudinalMeters: regionInMeters,
-                                            longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
+        showUserLocation()
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
     }
 }
 

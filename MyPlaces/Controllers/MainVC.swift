@@ -118,9 +118,9 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         ascendingSorting.toggle()
         
         if ascendingSorting {
-            reversedSortingButton.image = #imageLiteral(resourceName: "AZ")
+            reversedSortingButton.image = #imageLiteral(resourceName: "az")
         } else {
-            reversedSortingButton.image = #imageLiteral(resourceName: "ZA")
+            reversedSortingButton.image = #imageLiteral(resourceName: "za")
         }
         sorting()
     }
