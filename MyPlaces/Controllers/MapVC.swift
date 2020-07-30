@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol MapVCDelegate {
+    func getAddress(_ address: String?)
+}
+
 class MapVC: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
@@ -17,6 +21,7 @@ class MapVC: UIViewController {
     @IBOutlet var mapPinImage: UIButton!
     @IBOutlet var doneButton: UIButton!
     
+    var mapVCDelegate: MapVCDelegate?
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
@@ -159,6 +164,8 @@ class MapVC: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        mapVCDelegate?.getAddress(addressLabel.text)
+        dismiss(animated: true)
     }
 }
 
