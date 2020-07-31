@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6929090F24D40A51005FFA8F /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6929090E24D40A51005FFA8F /* MapManager.swift */; };
 		6932A66A24A0D23300A9501C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932A66924A0D23300A9501C /* AppDelegate.swift */; };
 		6932A66C24A0D23300A9501C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932A66B24A0D23300A9501C /* SceneDelegate.swift */; };
 		6932A67124A0D23300A9501C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6932A66F24A0D23300A9501C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6929090E24D40A51005FFA8F /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		6932A66624A0D23300A9501C /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6932A66924A0D23300A9501C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6932A66B24A0D23300A9501C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6929090D24D40A27005FFA8F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6933BCA324B70F1400E9156C /* StorageManager.swift */,
+				69A5A77424CC14EC00C78069 /* RatingControl.swift */,
+				6929090E24D40A51005FFA8F /* MapManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6932A65D24A0D23200A9501C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 				6934BDC524A5FADE0086256C /* Models */,
 				6934BDC624A5FAE80086256C /* Views */,
 				6934BDC424A5FAD30086256C /* Controllers */,
+				6929090D24D40A27005FFA8F /* Helpers */,
 				6934BDC724A5FAF30086256C /* Resources */,
 				6934BDC324A5FAB40086256C /* Supporting Files */,
 			);
@@ -130,8 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				6939403024A635A400295029 /* Place.swift */,
-				6933BCA324B70F1400E9156C /* StorageManager.swift */,
-				69A5A77424CC14EC00C78069 /* RatingControl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 				6933BCA424B70F1400E9156C /* StorageManager.swift in Sources */,
 				69A5A77524CC14EC00C78069 /* RatingControl.swift in Sources */,
 				6939403324A6482A00295029 /* NewPlaceVC.swift in Sources */,
+				6929090F24D40A51005FFA8F /* MapManager.swift in Sources */,
 				6932A66C24A0D23300A9501C /* SceneDelegate.swift in Sources */,
 				6994579024CEA1D700462044 /* MapVC.swift in Sources */,
 				6939403124A635A400295029 /* Place.swift in Sources */,
