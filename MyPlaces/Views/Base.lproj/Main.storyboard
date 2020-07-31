@@ -423,6 +423,17 @@
                                     <action selector="doneButtonPressed:" destination="Y66-6t-GHm" eventType="touchUpInside" id="PIm-G0-a7I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aO-rR-7st" userLabel="Go Button">
+                                <rect key="frame" x="182" y="715" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PFH-Xh-oJh"/>
+                                    <constraint firstAttribute="height" constant="50" id="XpV-6U-oo9"/>
+                                </constraints>
+                                <state key="normal" image="getDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="Y66-6t-GHm" eventType="touchUpInside" id="QHY-R1-y2u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -434,7 +445,9 @@
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="xoj-H8-36M" secondAttribute="trailing" constant="20" id="Oyz-Gt-BVJ"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="dvS-Og-O0O" secondAttribute="trailing" id="UeZ-hs-kgS"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="LAk-rw-aoF" secondAttribute="trailing" constant="9" id="jaM-aE-B4U"/>
+                            <constraint firstItem="D77-LQ-ln7" firstAttribute="bottom" secondItem="3aO-rR-7st" secondAttribute="bottom" constant="43" id="nG0-G6-EF6"/>
                             <constraint firstItem="OlO-kz-0Qm" firstAttribute="centerX" secondItem="JpM-Zs-IY5" secondAttribute="centerX" id="oN0-j4-xjW"/>
+                            <constraint firstItem="3aO-rR-7st" firstAttribute="centerX" secondItem="JpM-Zs-IY5" secondAttribute="centerX" id="pE6-yv-pjg"/>
                             <constraint firstItem="xoj-H8-36M" firstAttribute="leading" secondItem="D77-LQ-ln7" secondAttribute="leading" constant="20" id="pOT-lO-ZRD"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="trailing" secondItem="GFr-6W-ZhY" secondAttribute="trailing" constant="9" id="pay-Rs-Xl2"/>
                             <constraint firstItem="D77-LQ-ln7" firstAttribute="bottom" secondItem="OlO-kz-0Qm" secondAttribute="bottom" constant="43" id="q5x-Rq-9R0"/>
@@ -447,6 +460,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="xoj-H8-36M" id="TFY-g1-jk4"/>
                         <outlet property="doneButton" destination="OlO-kz-0Qm" id="qJo-0G-tlc"/>
+                        <outlet property="goButton" destination="3aO-rR-7st" id="pC4-le-Eba"/>
                         <outlet property="mapPinImage" destination="kHh-1b-aQ1" id="TQt-ol-5AX"/>
                         <outlet property="mapView" destination="dvS-Og-O0O" id="Pvu-ha-FWx"/>
                     </connections>
@@ -506,6 +520,7 @@
         <image name="addPhoto" width="195" height="196"/>
         <image name="az" width="25" height="24"/>
         <image name="cancel" width="128" height="128"/>
+        <image name="getDirection" width="50" height="50"/>
         <image name="location" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
         <image name="pin" width="42" height="42"/>
