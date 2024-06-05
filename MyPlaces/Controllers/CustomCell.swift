@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cosmos
 
 class CustomCell: UITableViewCell {
     

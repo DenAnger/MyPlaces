@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,8 +16,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private let searchController = UISearchController(searchResultsController: nil)
     
-    private var places: Results<Place>!
-    private var filteredPlaces: Results<Place>!
+    private var places: Place!
+    private var filteredPlaces: Place!
     private var ascendingSorting = true
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else {
@@ -34,7 +33,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        places = realm.objects(Place.self)
+        places = Place()
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
